@@ -11,6 +11,9 @@ int yC = Convert.ToInt32(Console.ReadLine());
 int quarter = Quarter(xC, yC);
 Console.WriteLine(quarter == 0 ? "Введены некоррекные координаты" : quarter);
 
+string quarterStr = QuarterStr(xC, yC);
+Console.WriteLine(quarterStr);
+
 int Quarter(int x, int y)
 {
     if (x > 0 && y > 0) return 1;
@@ -18,4 +21,13 @@ int Quarter(int x, int y)
     if (x < 0 && y < 0) return 3;
     if (x > 0 && y < 0) return 4;
     return 0;
+}
+
+string QuarterStr(int x, int y)
+{
+    if (x > 0 && y > 0) return 1 "Первая четверть";
+    if (x < 0 && y > 0) return 2 "Вторая четверть";
+    if (x < 0 && y < 0) return 3 "Третья четверть";
+    if (x > 0 && y < 0) return 4 "Четвертая четверть";
+    return "Введены некоррекные координаты";
 }
